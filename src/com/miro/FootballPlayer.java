@@ -1,8 +1,8 @@
 package com.miro;
 
-public class FotballPlayer extends  Player {
+public class FootballPlayer extends  Player {
 
-    public FotballPlayer(String name) {
+    public FootballPlayer(String name) {
         super(name);
     }
 }

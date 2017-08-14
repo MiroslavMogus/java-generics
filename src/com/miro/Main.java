@@ -1,7 +1,5 @@
 package com.miro;
 
-import sun.text.resources.cldr.om.FormatData_om;
-
 public class Main {
 
     /************************************
@@ -13,17 +11,36 @@ public class Main {
 
     public static void main(String[] args) {
 
-        FotballPlayer joe = new FotballPlayer("Joe");
+        FootballPlayer joe = new FootballPlayer("Joe");
+        FootballPlayer jimi = new FootballPlayer("Jimi");
         BaseballPlayer jim = new BaseballPlayer("Jim");
         SoccerPlayer dario = new SoccerPlayer("Dario");
 
 
-        Team greatTeam = new Team("Great Team");
+        /************************************
+
+         Football game
+
+         ************************************/
+
+
+        Team<FootballPlayer> greatTeam = new Team<>("Great Team");
         greatTeam.addPlayer(joe);
-        greatTeam.addPlayer(jim);
-        greatTeam.addPlayer(dario);
+
+        Team<FootballPlayer> anotherGreatTeam = new Team<>("Great Team");
+        anotherGreatTeam.addPlayer(jimi);
+
+
+
+
+
+        Team<SoccerPlayer> greatSoccerTeam = new Team<>("Great Soccer Team");
+        greatSoccerTeam .addPlayer(dario);
 
         System.out.println("We have " + greatTeam.numPlayers() + " players in " + greatTeam.getName());
+
+
+
     }
 
 }
